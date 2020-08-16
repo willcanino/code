@@ -1,0 +1,73 @@
+<head>
+		<title>Will's Pizza's</title>
+</head>
+	
+<body>
+		<h1> Welcome To Will's Pizza's </h1>
+		<h2> Order your Custom Pizza </h2> <br>
+	
+		<form>
+			<label for="Pizza Sauce"><h3>What kind of sauce would you like?</h3></label>
+			<select id="sauce" name="sauce">
+				<option value="Barbeque Sauce">Barbeque Sauce</option>
+				<option value="Tomato Sauce">Tomato Sauce</option>
+				<option value="Mayonnaise">Mayonnaise</option>
+				<option value="Marinara Sauce">Marinara Sauce</option>
+				<option value="No Sauce">No Sauce</option>
+			</select>
+		
+			<label for="Pizza Crust"><h3>What pizza crust do you want?</h3></label>
+			<select id="lunch" name="lunch">
+				<option value="Cheesy Crust">Cheesey Crust</option>
+				<option value="Classic Crust">Classic Crust</option>
+				<option value="Deep Pan">Deep Pan</option>
+				<option value="Gluten Free">Gluten Free - Classic Crust</option>
+				<option value="Thin 'n' Crispy">Thin 'n' Crispy</option>
+			  </select> 
+	<br><br>
+		<p><h3>Choose your pizza toppings:</h3></p>
+		<label for="extra sauce">Extra Sauce</label>
+			<input id="extra" name="topping" type="checkbox" value="bacon">
+			<label for="cheese">Extra cheese</label>
+			<input id="cheese" name="topping" type="checkbox" value="cheese">
+			<label for="extra bacon">Extra Bacon</label>
+			<input id="extra" name="topping" type="checkbox" value="extra bacon">
+			
+	<br><br>
+			<label for="Sausage">Sausage</label>
+			<input id="Sausage" name="topping" type="checkbox" value="Sausage">
+			<label for="chicken">Chicken Strips</label>
+			<input id="chicken" name="topping" type="checkbox" value="chicken">
+			<label for="Jalapeno">Jalapeno</label>
+			<input id="jalapeno" name="topping" type="checkbox" value="Jalapeno">
+	<br><br>
+			<label for="Beef">Steak Cubes</label>
+			<input id="beef" name="topping" type="checkbox" value="beef">
+			<label for="pepperoni">Pepperoni</label>
+			<input id="pepperoni" name="topping" type="checkbox" value="pepperoni">
+			<label for="Mushrooms">Mushrooms</label>
+			<input id="Mushrooms" name="topping" type="checkbox" value="Mushrooms">
+			
+	<br><br>
+			<label for="quantity"> <h3>How many pizzas would you like?</h3></label>
+			<input id="quantity" name="quantity" type="number" step="1">
+	<br><br>
+			</form>
+			
+		
+			<form method="post" action="onSubmit.php">
+				<label for="fname">First name:</label><br>
+				<input type="text" id="fname" name="fname"><br>
+				<label for="lname">Last name:</label><br>
+				<input type="text" id="lname" name="lname">
+			
+	<br>
+			<input type="submit" name="submit">
+			
+			</form>
+
+    
+			
+
+	
+</body>
