@@ -33,11 +33,10 @@ def handle_pizza_data():
     # mainly so that the data is consistent
     post_data_loc = pizza_dir / f"{format(datetime.datetime.today(), '%Y-%m-%d_%I.%M.%S.%p')}.json"
     with post_data_loc.open(mode='w') as file:
-        post_dict = dict(post_request)
-        post_dict.pop('submit', None)
-        json.dump(post_dict, file, indent=4)
+        unparsed = post_request.to_dict(flat=False)
+        unparsed.pop('submit', None)
+        json.dump({key: val[0] if len(val) == 1 else val
+                    for key, val in unparsed.items()}, file, indent=4)
 
-    print(f"flask.request.form={post_request}")
-    print(f"dict={dict(post_request)}")
     flask.flash('Data submitted successfully!')
     return flask.redirect(flask.url_for('wills_pizza'))
