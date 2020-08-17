@@ -1,9 +1,12 @@
 <head>
 		<title>Will's Pizza's</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='modal.css') }}">
+		<!-- Allows us to use Brython instead of Javascript :) -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython_stdlib.js"></script>
 </head>
 
-<body>
+<body onload="brython()">
 		{% with messages = get_flashed_messages() %}
 			{% if messages %}
 				<!-- This modal is originally from w3 schools
@@ -19,8 +22,7 @@
 			{% endif %}
 		{% endwith %}
 
-		<!-- Need to add javascript so that we can close the modal -->
-		<script src="{{ url_for('static', filename='modal.js') }}"></script>
+		<script type="text/python" src="{{ url_for('static', filename='modal.py') }}"></script>
 
 		<h1> Welcome To Will's Pizza's </h1>
 		<h2> Order your Custom Pizza </h2> <br>
