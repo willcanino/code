@@ -7,7 +7,7 @@ if modal_list:
 
     @bind(window, 'click')
     @bind(span, 'click')
-    def close_modal(event=None):
+    def close_modal(event):
         if event.target == span:
             modal.style.display = 'none'
         elif event.target == modal:
