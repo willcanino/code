@@ -2,7 +2,7 @@ import flask
 import pathlib
 import datetime
 import json
-from app import app
+from pizza import app
 
 # There are two possible approaches to making a form
 # We could use a completely 'Pythonic' approach as use as little HTML
