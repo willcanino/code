@@ -7,7 +7,7 @@ from app import app
 # There are two possible approaches to making a form
 # We could use a completely 'Pythonic' approach as use as little HTML
 # as possible, which would probably be the most ideal approach
-# (for me personally), however, our 'client' , willcanino, has
+# (for me personally), however, our 'client', willcanino, has
 # not the slightest clue how to use Python.  Therefore, using the
 # 'Pythonic' approach would give our client very little room to grow
 # and ulitmately limit his ability to expand the website without
