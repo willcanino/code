@@ -6,7 +6,7 @@
 		<h1> Welcome To Will's Pizza's </h1>
 		<h2> Order your Custom Pizza </h2> <br>
 
-		<form>
+		<form method="post" action="{{ url_for('handle_pizza_data') }}">
 			<label for="Pizza Sauce"><h3>What kind of sauce would you like?</h3></label>
 			<select id="sauce" name="sauce">
 				<option value="Barbeque Sauce">Barbeque Sauce</option>
@@ -52,10 +52,6 @@
 			<label for="quantity"> <h3>How many pizzas would you like?</h3></label>
 			<input id="quantity" name="quantity" type="number" step="1">
 	<br><br>
-			</form>
-
-
-			<form method="post" action="{{ url_for('handle_pizza_data') }}">
 				<label for="fname">First name:</label><br>
 				<input type="text" id="fname" name="fname"><br>
 				<label for="lname">Last name:</label><br>
@@ -65,9 +61,4 @@
 			<input type="submit" name="submit">
 
 			</form>
-
-
-
-
-
 </body>
