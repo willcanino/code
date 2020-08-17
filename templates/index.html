@@ -1,8 +1,27 @@
 <head>
 		<title>Will's Pizza's</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='modal.css') }}">
 </head>
 
 <body>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<!-- This modal is originally from w3 schools
+			  		and has been adapted for this website.
+					 	See the original here ⬇
+						https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal-->
+				<div class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>{{ messages[0] }}</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endwith %}
+
+		<!-- Need to add javascript so that we can close the modal -->
+		<script src="{{ url_for('static', filename='modal.js') }}"></script>
+
 		<h1> Welcome To Will's Pizza's </h1>
 		<h2> Order your Custom Pizza </h2> <br>
 
