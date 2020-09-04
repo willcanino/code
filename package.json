@@ -1,6 +1,5 @@
 {
-  "brython": {
-    "version": "3.8.9",
-    "resolved": "https://registry.npmjs.org/brython/-/brython-3.8.9.tgz"
-    }
+  "dependencies": {
+    "brython": "^3.8.9"
+  }
 }
